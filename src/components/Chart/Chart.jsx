@@ -23,14 +23,45 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
                 datasets: [{
                     data: dailyData.map(({ confirmed }) => confirmed),
                     label: 'Infected',
-                    borderColor: '#3333ff',
-                    fill: true,
+                    fill: false,
+                    lineTension: 1,
+                    backgroundColor: 'rgba(144, 99, 255,0.4)',
+                    borderColor: 'rgba(207, 35, 23,1)',
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: 'rgba(41, 41, 41,1)',
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+                    pointHoverBorderColor: 'rgba(220,220,220,1)',
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 2,
+                    pointHitRadius: 10,
+                    borderWidth: 7,
                 }, {
                     data: dailyData.map(({ deaths }) => deaths),
                     label: 'Deaths',
-                    borderColor: 'red',
-                    backgroundColor: 'rgba(255, 0, 0, 0.5',
-                    fill: true,
+                    fill: false,
+                    lineTension: 0.1,
+                    backgroundColor: 'rgba(41, 41, 41,0.4)',
+                    borderColor: 'rgba(23, 60, 207,1)',
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: 'rgba(41, 41, 41,1)',
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+                    pointHoverBorderColor: 'rgba(220,220,220,1)',
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 2,
+                    pointHitRadius: 10,
+                    borderWidth: 7,
                 }],
             }}
         />) : null
@@ -64,6 +95,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         <div className={styles.container}>
             {country ? barChart : lineChart}
         </div>
+        
     )
 }
 

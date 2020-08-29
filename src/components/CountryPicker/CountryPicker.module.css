@@ -2,3 +2,8 @@
     width: 30%;
     margin-bottom: 30px !important;
 }
+
+.root {
+    display: flex;
+    flex-wrap: wrap;
+}

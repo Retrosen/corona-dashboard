@@ -1,18 +1,29 @@
 .container {
-    margin: 50px 0;
+    margin: 20px 0;
 }
 
 .card {
-    margin: 0 2% !important;
+    margin: 10px !important;
 }
-
 
 .infected {
     border-bottom: 10px solid rgba(0, 0, 255, 0.5);
 }
 
-.recovered {
+.active {
+    border-bottom: 10px solid rgba(255, 255, 0, 0.5);
+}
+
+.recoveryPercentage {
     border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+}
+
+.recovered {
+    border-bottom: 10px solid rgba(3, 252, 240, 0.5);
+}
+
+.deathsPercentage {
+    border-bottom: 10px solid rgba(161, 3, 252, 0.5);
 }
 
 .deaths {

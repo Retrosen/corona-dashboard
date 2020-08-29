@@ -22,6 +22,16 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                         <Typography variant="body2">Number of active cases of COVID-19</Typography>
                     </CardContent>
                 </Grid>
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles, styles.recoveryPercentage)}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom>Recovery recoveryPercentage</Typography>
+                        <Typography variant="h5">
+                            <CountUp suffix={"%"} decimals={2} start={0} end={(recovered.value / confirmed.value) * 100} duration={5} separator="," />
+                        </Typography>
+                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography variant="body2">Recovery percentage of COVID-19 cases</Typography>
+                    </CardContent>
+                </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles, styles.recovered)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Recovered</Typography>
@@ -40,6 +50,16 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                         </Typography>
                         <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of deaths caused by COVID-19</Typography>
+                    </CardContent>
+                </Grid>
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles, styles.deathsPercentage)}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom>Death Percentage</Typography>
+                        <Typography variant="h5">
+                            <CountUp suffix={"%"} decimals={2} start={0} end={(deaths.value / confirmed.value) * 100} duration={5} separator="," />
+                        </Typography>
+                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography variant="body2">Death percentage of COVID-19 cases</Typography>
                     </CardContent>
                 </Grid>
             </Grid>

@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Corona Virus Tracker" />
@@ -12,6 +14,30 @@
 
 <body>
   <div id="root"></div>
+   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+   <!-- Add the standard Performance Monitoring library -->
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-performance.js"></script>
+   <script>
+    // TODO: Replace the following with your app's Firebase project configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDpldc-7zXygC8FLQ_u6iUg0yuIbYjfzdQ",
+    authDomain: "corona-tracker-3c274.firebaseapp.com",
+    databaseURL: "https://corona-tracker-3c274.firebaseio.com",
+    projectId: "corona-tracker-3c274",
+    storageBucket: "corona-tracker-3c274.appspot.com",
+    messagingSenderId: "719703821451",
+    appId: "1:719703821451:web:b1b5a8d1438e4d002b988e",
+    measurementId: "G-VPX802YWZE"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  
+    // Initialize Performance Monitoring and get a reference to the service
+    var perf = firebase.performance();
+  </script>
 </body>
 
 </html>
